@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="script.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="style.css">
+  <title>Consulta CEP</title>
+</head>
+<body>
+  <div class="container-animation">
+    <div class="container-animation-text">
+      <h1>Encontre o endereço através do CEP!</h1>
+      <p>Utilizando a api ViaCEP, encontramos o endereço de maneira rápida e fácil,
+        preencha o campo com um CEP válido e pronto!</p>
+    </div>
+    <lottie-player
+      src="https://assets7.lottiefiles.com/packages/lf20_pcxwaqk2.json"
+      background="transparent" 
+      speed="1" 
+      style="width: 600px; height: 600px;"
+      loop
+      autoplay>
+    </lottie-player>
+  </div>
+  <div class="container-form">
+    <h1>Consultar CEP</h1>
+    <div class="form-group">
+      <input id="input-cep" type="text" placeholder="Ex.: 00000-000">
+      <button id="button-cep">Consultar</button>
+    </div>
+    <div class="container-response">
+      <div class="left-card">
+        <p id="rua"></p>
+        <p id="bairro">Bairro: </p>
+        <p id="cidade">Cidade: </p>
+        <p id="estado">Estado: </p>
+        <p id="cep">Cep: </p>
+      </div>
+      <div id="container-map"></div>
+    </div>
+  </div>
+</body>
+</html>
